@@ -34,14 +34,27 @@ const IndexPage = () => (
     <form name="feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
       {/* You still need to add the hidden input with the form name to your JSX form */}
       <input type="hidden" name="form-name" value="feedback" />
-      <input type="hidden" name="good comment" value="good" />
-      {/* <p>
-        <label>Message: <textarea name="message"></textarea></label>
-      </p> */}
+
       <p>
-        <button type="submit" name="good"><i class="far fa-frown"></i></button>
+        <label>Message: <textarea name="good feedback"></textarea></label>
+      </p>
+      <p>
+        <button type="submit" name="good">Submit</button>
       </p>
     </form>
+
+    <form name="feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      {/* You still need to add the hidden input with the form name to your JSX form */}
+      <input type="hidden" name="form-name" value="feedback" />
+
+      <p>
+        <label>Message: <textarea name="bad feedback"></textarea></label>
+      </p>
+      <p>
+        <button type="submit" name="bad">Submit</button>
+      </p>
+    </form>
+
 
     <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
