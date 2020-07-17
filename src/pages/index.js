@@ -15,14 +15,14 @@ const IndexPage = () => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-
+    {/* 
     <form name="good feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field"  >
-      {/* You still need to add the hidden input with the form name to your JSX form */}
+   
       <input type="hidden" name="good" value="good" />
       <input type="text" name="good comment" value="good" />
       <button type="submit" name="good"><i class="far fa-smile"></i></button>
-      {/* <button type="submit" name="bad"><i class="far fa-frown"></i></button> */}
-    </form>
+      <button type="submit" name="bad"><i class="far fa-frown"></i></button>
+    </form> */}
     {/* <form name="bad feedback " method="post" data-netlify="true" data-netlify-honeypot="bot-field"  >
      
       <input type="hidden" name="bad" value="bad" />
@@ -30,6 +30,24 @@ const IndexPage = () => (
 
       <button type="submit" name="bad"><i class="far fa-frown"></i></button>
     </form> */}
+
+    <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      {/* You still need to add the hidden input with the form name to your JSX form */}
+      <input type="hidden" name="form-name" value="contact" />
+      <p>
+        <label>Your Name: <input type="text" name="name" /></label>
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+
     <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
