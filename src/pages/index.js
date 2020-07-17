@@ -16,17 +16,17 @@ const IndexPage = () => (
       <Image />
     </div>
 
-    <form name="feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/" >
+    <form name="good feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="" >
       {/* You still need to add the hidden input with the form name to your JSX form */}
       <input type="hidden" name="good" value="good" />
-      <input type="text" style={{ display: "none" }} name="good" value="good" />
+      {/* <input type="text" style={{ display: "none" }} name="good" value="good" /> */}
       <button type="submit" name="good"><i class="far fa-smile"></i></button>
       {/* <button type="submit" name="bad"><i class="far fa-frown"></i></button> */}
     </form>
-    <form name="feedback " method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/" >
+    <form name="bad feedback " method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/" >
       {/* You still need to add the hidden input with the form name to your JSX form */}
       <input type="hidden" name="bad" value="bad" />
-      <input type="text" style={{ display: "none" }} name="bad" value="bad" />
+      {/* <input type="text" style={{ display: "none" }} name="bad" value="bad" /> */}
 
       <button type="submit" name="bad"><i class="far fa-frown"></i></button>
     </form>
