@@ -31,15 +31,15 @@ const IndexPage = () => (
       <button type="submit" name="bad"><i class="far fa-frown"></i></button>
     </form> */}
 
-    <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+    <form name="feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
       {/* You still need to add the hidden input with the form name to your JSX form */}
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="feedback" />
 
-      <p>
+      {/* <p>
         <label>Message: <textarea name="message"></textarea></label>
-      </p>
+      </p> */}
       <p>
-        <button type="submit">Send</button>
+        <button type="submit"><i class="far fa-frown"></i></button>
       </p>
     </form>
 
