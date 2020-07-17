@@ -39,7 +39,7 @@ const IndexPage = () => (
         <label>Message: <textarea name="message"></textarea></label>
       </p> */}
       <p>
-        <button type="submit"><i class="far fa-frown"></i></button>
+        <button type="submit" name="good"><i class="far fa-frown"></i></button>
       </p>
     </form>
 
