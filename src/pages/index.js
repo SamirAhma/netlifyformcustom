@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous" />
     <SEO title="Home" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -15,11 +16,12 @@ const IndexPage = () => (
       <Image />
     </div>
 
-    <form name="Like" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/" >
+    <form name="feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/" >
       {/* You still need to add the hidden input with the form name to your JSX form */}
-      <input type="hidden" name="name" value="Like" />
+      <input type="hidden" name="feedback" value="Like" />
       {/* <input type="text" name="Like" value="Like" /> */}
-      <button type="submit">Send</button>
+      <button type="submit" name="good"><i class="far fa-smile"></i></button>
+      <button type="submit" name="bad"><i class="far fa-frown"></i></button>
     </form>
     <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
