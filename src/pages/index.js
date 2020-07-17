@@ -14,6 +14,13 @@ const IndexPage = () => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
+
+    <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      {/* You still need to add the hidden input with the form name to your JSX form */}
+      <input type="hidden" name="Like" value="contact" />
+      <input type="text" name="Like" value="contact" />
+      <button type="submit">Send</button>
+    </form>
     <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
