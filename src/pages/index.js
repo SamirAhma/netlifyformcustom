@@ -19,14 +19,14 @@ const IndexPage = () => (
     <form name="feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/" >
       {/* You still need to add the hidden input with the form name to your JSX form */}
       <input type="hidden" name="feedback" value="Like" />
-      {/* <input type="text" name="Like" value="Like" /> */}
+      <input type="text" name="Like" value="Like" />
       <button type="submit" name="good"><i class="far fa-smile"></i></button>
 
     </form>
     <form name="feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/" >
       {/* You still need to add the hidden input with the form name to your JSX form */}
       <input type="hidden" name="feedback" value="Like" />
-      {/* <input type="text" name="Like" value="Like" /> */}
+      <input type="text" name="Like" value="Like" />
 
       <button type="submit" name="bad"><i class="far fa-frown"></i></button>
     </form>
