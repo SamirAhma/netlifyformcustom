@@ -15,9 +15,9 @@ const IndexPage = () => (
       <Image />
     </div>
 
-    <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+    <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/" >
       {/* You still need to add the hidden input with the form name to your JSX form */}
-      <input type="hidden" name="Like" value="contact" />
+      {/* <input type="hidden" name="Like" value="contact" /> */}
       <input type="text" name="Like" value="contact" />
       <button type="submit">Send</button>
     </form>
