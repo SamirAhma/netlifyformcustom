@@ -115,7 +115,7 @@ const ModalExample = (props) => {
                 </div>
                 <div className="" style={showText ? {} : { display: "none" }}>
                     <div className="rating">
-                        <form className="rating-form" action="" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="Positive Feedback For Service" >
+                        <form className="rating-form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="Positive Feedback For Service" >
 
                             <ModalHeader toggle={toggle}>Awesome!</ModalHeader>
                             <ModalBody>
@@ -142,7 +142,7 @@ const ModalExample = (props) => {
 
                 <div className="" style={showText1 ? {} : { display: "none" }}>
                     <div className="rating">
-                        <form className="rating-form" name="Negative Feedback For Service" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="">
+                        <form className="rating-form" name="Negative Feedback For Service" method="post" data-netlify="true" data-netlify-honeypot="bot-field" >
 
                             <ModalHeader toggle={toggle}>We're sorry. :(</ModalHeader>
                             <ModalBody>    <label for="message">What went wrong?</label>

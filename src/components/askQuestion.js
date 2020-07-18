@@ -9,7 +9,7 @@ export default function askQuestion() {
                     <div class="card-body">
                         <h5 class="card-title">Ask a Question</h5>
 
-                        <form name="AskQuestion" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
+                        <form name="AskQuestion" method="post" data-netlify="true" data-netlify-honeypot="bot-field" >
                             <input type="hidden" name="form-name" value="AskQuestion" />
                             <input type="textarea" class="form-control" id="message" name="question" placeholder="What is your question?" required />
                             <div className="mt-2">
