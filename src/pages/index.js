@@ -6,7 +6,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 
-
+import Modal from "../components/modal"
 
 
 const IndexPage = () => {
@@ -21,9 +21,9 @@ const IndexPage = () => {
 
 
   return (
-    <Layout>
+    <>
       {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous" /> */}
-      <SEO title="Home" />
+      {/* <SEO title="Home" />
       <button onClick={() => setShowText(!showText)}>Send Feedback</button>
       {showText && <div className="rating">
         <form className="rating-form" name="feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="">
@@ -41,7 +41,10 @@ const IndexPage = () => {
             <button type="submit" onClick={handleGameClick}>Submit</button>
           </p>
         </form>
-      </div>}
+
+
+
+      </div>} */}
       {/* 
     <form name="good feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field"  >
    
@@ -93,9 +96,31 @@ const IndexPage = () => {
       </p>
     </form> */}
 
+      <div className="container" style={{ marginTop: "70px" }}>
+        <Modal buttonLabel="Send Feedback"></Modal>
 
 
-    </Layout>
+        <div className="faq">
+          <div class="card" >
+
+            <div class="card-body">
+              <h5 class="card-title">Ask a Question</h5>
+
+              <form action="">
+                <input type="hidden" name="form-name" value="AskQuestion" />
+                <input type="textarea" class="form-control" id="message" placeholder="What is your question?" />
+                <a href="#" class="btn btn-primary">Submit</a>
+
+              </form>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </>
   )
 }
 
