@@ -106,7 +106,7 @@ const IndexPage = () => {
             <div class="card-body">
               <h5 class="card-title">Ask a Question</h5>
 
-              <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+              <form name="AskQuestion" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank">
                 <input type="hidden" name="form-name" value="AskQuestion" />
                 <input type="textarea" class="form-control" id="message" placeholder="What is your question?" />
                 <button class="btn btn-primary" type="submit">Submit</button>
