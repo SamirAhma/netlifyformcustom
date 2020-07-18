@@ -68,19 +68,6 @@ const ModalExample = (props) => {
                             </ModalFooter>
                         </form>
 
-                        {/* <form name="feedback_bad" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
-                            <input type="hidden" name="form-name" value="feedback_bad" />
-                            <input type="textarea" class="form-control" id="message" name="not_good_feedback" placeholder="What is your question?" />
-                            <button class="btn btn-primary" type="submit">Submit</button>
-
-                        </form> */}
-
-                        {/* <form name="Hello" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
-                            <input type="hidden" name="form-name" value="Hello" />
-                            <input type="textarea" class="form-control" id="message" name="question" placeholder="What is your question?" />
-                            <button class="btn btn-primary" type="submit">Submit</button>
-
-                        </form> */}
 
                     </div>
                 </div>
@@ -94,7 +81,7 @@ const ModalExample = (props) => {
                             <ModalHeader toggle={toggle}>We're sorry. :(</ModalHeader>
                             <ModalBody>    <label for="message">What went wrong?</label>
                                 <input type="hidden" name="form-name" value="Negative Feedback For Service" />
-                                <input type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="Negative Feedback" />
+                                <input type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="negative-feedback" />
                             </ModalBody>
 
                             <ModalFooter>
