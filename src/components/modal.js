@@ -51,11 +51,11 @@ const ModalExample = (props) => {
                 </div>
                 <div className="" style={showText ? {} : { display: "none" }}>
                     <div className="rating">
-                        {/* <form className="rating-form" action="" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="badfeedback" >
+                        <form className="rating-form" action="" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="Feedback for services" >
 
                             <ModalHeader toggle={toggle}>Awesome!</ModalHeader>
                             <ModalBody>
-                                <input type="hidden" name="form-name" value="badfeedback" />
+                                <input type="hidden" name="form-name" value="Feedback for services" />
 
                                 <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label>
                                 <input type="textarea" class="form-control" id="message" name="bad-feedback" placeholder="Your feedback here ..." />
@@ -67,7 +67,7 @@ const ModalExample = (props) => {
                                 </p>
                             </ModalFooter>
                         </form>
- */}
+
                         {/* <form name="feedback_bad" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
                             <input type="hidden" name="form-name" value="feedback_bad" />
                             <input type="textarea" class="form-control" id="message" name="not_good_feedback" placeholder="What is your question?" />
@@ -75,12 +75,12 @@ const ModalExample = (props) => {
 
                         </form> */}
 
-                        <form name="Hello" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
+                        {/* <form name="Hello" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
                             <input type="hidden" name="form-name" value="Hello" />
                             <input type="textarea" class="form-control" id="message" name="question" placeholder="What is your question?" />
                             <button class="btn btn-primary" type="submit">Submit</button>
 
-                        </form>
+                        </form> */}
 
                     </div>
                 </div>

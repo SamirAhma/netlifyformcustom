@@ -46,10 +46,10 @@ const IndexPage = () => {
           </div>
 
 
-
+          {/* dummy form so netlify able to detect the form for popu.The name of the form need to be same with the form in the popup */}
           <div className="card" style={{ display: "none" }}>
-            <form name="Hello" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
-              <input type="hidden" name="form-name" value="Hello" />
+            <form name="Feedback for services" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
+              <input type="hidden" name="form-name" value="Feedback for services" />
               <input type="textarea" class="form-control" id="message" name="question" placeholder="What is your question?" />
               <button class="btn btn-primary" type="submit">Submit</button>
 
