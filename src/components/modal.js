@@ -68,8 +68,8 @@ const ModalExample = (props) => {
                             </ModalFooter>
                         </form>
  */}
-                        <form name="AskQuestion" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
-                            <input type="hidden" name="form-name" value="AskQuestion" />
+                        <form name="badfeedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
+                            <input type="hidden" name="form-name" value="badfeedback" />
                             <input type="textarea" class="form-control" id="message" name="question" placeholder="What is your question?" />
                             <button class="btn btn-primary" type="submit">Submit</button>
 
