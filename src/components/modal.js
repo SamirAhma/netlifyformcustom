@@ -51,11 +51,11 @@ const ModalExample = (props) => {
                 </div>
                 <div className="" style={showText ? {} : { display: "none" }}>
                     <div className="rating">
-                        <form className="rating-form" action="" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="Feedback for services" >
+                        <form className="rating-form" action="" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="Positive Feedback For Service" >
 
                             <ModalHeader toggle={toggle}>Awesome!</ModalHeader>
                             <ModalBody>
-                                <input type="hidden" name="form-name" value="Feedback for services" />
+                                <input type="hidden" name="form-name" value="Positive Feedback For Service" />
 
                                 <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label>
                                 <input type="textarea" class="form-control" id="message" name="positive-feedback" placeholder="Your feedback here ..." />
@@ -89,11 +89,11 @@ const ModalExample = (props) => {
 
                 <div className="" style={showText1 ? {} : { display: "none" }}>
                     <div className="rating">
-                        <form className="rating-form" name="Feedback for services" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="">
+                        <form className="rating-form" name="Negative Feedback For Service" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="">
 
                             <ModalHeader toggle={toggle}>We're sorry. :(</ModalHeader>
                             <ModalBody>    <label for="message">What went wrong?</label>
-                                <input type="hidden" name="form-name" value="Feedback for services" />
+                                <input type="hidden" name="form-name" value="Negative Feedback For Service" />
                                 <input type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="Negative Feedback" />
                             </ModalBody>
 
