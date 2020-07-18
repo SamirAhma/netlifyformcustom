@@ -23,31 +23,95 @@ const ModalExample = (props) => {
     return (
         <div>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" ></link>
-            <Button color="dark" onClick={toggle}>{buttonLabel}</Button>
-            <Modal isOpen={modal} toggle={toggle} className={className}>
+            <Button style={{
+                background: "#fff",
+                border: ".05rem solid #5627ff",
+                borderRadius: ".2rem",
+                color: "#5627ff",
+                cursor: "pointer",
+                display: "inline-block",
+                fontSize: ".7rem",
+                fontWeight: "700",
+                height: "1.4rem",
+                lineHeight: "1.2rem",
+                outline: 0,
+                padding: ".05rem .3rem",
+                textAlign: "center",
+                textDecoration: "none",
+                transition: " background .2s,border .2s,box-shadow .2s,color .2s",
+
+
+                userSelect: "none",
+                verticalAlign: "middle",
+                whiteSpace: "nowrap"
+            }} onClick={toggle}>{buttonLabel}</Button>
+            <Modal isOpen={modal} toggle={toggle} className={className} >
                 <div className="" style={showText || showText1 ? { display: "none" } : {}} >
-                    <ModalHeader toggle={toggle}>How was your experience with papergov?</ModalHeader>
-                    {/* <ModalBody>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </ModalBody> */}
-                    <div className="" style={{ textAlign: "center" }}>
-                        <ModalBody>
-                            <p>
-                                <Button color="primary" onClick={() => setShowText(!showText)}>Good so far!</Button>
-                            </p>
+                    <div className="text-center mt-1 mb-5" toggle={toggle}>
 
-
-
-
-                            <p>
-
-                                <Button color="primary" onClick={() => setShowText1(!showText1)}>It could have been better</Button>
-                            </p>
-                        </ModalBody>
+                        <h5>  How was your experience with papergov?</h5>
                     </div>
-                    <ModalFooter>
 
-                    </ModalFooter>
+                    <div className="" style={{ textAlign: "center" }}>
+                        <div className="text-center">
+                            <p>
+                                <Button style={{
+                                    background: "#fff",
+                                    border: ".05rem solid #5627ff",
+                                    borderRadius: ".2rem",
+                                    color: "#5627ff",
+                                    cursor: "pointer",
+                                    display: "inline-block",
+                                    fontSize: ".9rem",
+                                    fontWeight: "700",
+                                    height: "2rem",
+                                    lineHeight: "1.2rem",
+                                    outline: 0,
+                                    padding: ".35rem .6rem",
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    transition: " background .2s,border .2s,box-shadow .2s,color .2s",
+
+
+                                    userSelect: "none",
+                                    verticalAlign: "middle",
+                                    whiteSpace: "nowrap"
+                                }} onClick={() => setShowText(!showText)}>Good so far!</Button>
+                            </p>
+
+
+
+
+                            <p>
+
+                                <Button style={{
+                                    background: "#fff",
+                                    border: ".05rem solid #5627ff",
+                                    borderRadius: ".2rem",
+                                    color: "#5627ff",
+                                    cursor: "pointer",
+                                    display: "inline-block",
+                                    fontSize: ".9rem",
+                                    fontWeight: "700",
+                                    height: "2rem",
+                                    lineHeight: "1.2rem",
+                                    outline: 0,
+                                    padding: ".35rem .6rem",
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    transition: " background .2s,border .2s,box-shadow .2s,color .2s",
+
+
+                                    userSelect: "none",
+                                    verticalAlign: "middle",
+                                    whiteSpace: "nowrap"
+                                }} onClick={() => setShowText1(!showText1)}>It could have been better</Button>
+                            </p>
+
+                        </div>
+
+                    </div>
+
                 </div>
                 <div className="" style={showText ? {} : { display: "none" }}>
                     <div className="rating">
@@ -55,15 +119,17 @@ const ModalExample = (props) => {
 
                             <ModalHeader toggle={toggle}>Awesome!</ModalHeader>
                             <ModalBody>
-                                <input type="hidden" name="form-name" value="Positive Feedback For Service" />
+                                <div className="text-center">
+                                    <input type="hidden" name="form-name" value="Positive Feedback For Service" />
 
-                                <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label>
-                                <input type="textarea" class="form-control" id="message" name="message" placeholder="Your feedback here ..." />
+                                    <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label>
+                                    <input type="textarea" class="form-control" id="message" name="message" placeholder="Your feedback here ..." />
+
+                                </div>
                             </ModalBody>
-
                             <ModalFooter>
                                 <p>
-                                    <button type="submit" className="btn btn-dark">Submit</button>
+                                    <button style={{ background: "#420EFF", color: "white", textTransform: "uppercase", fontWeight: "bold" }} type="submit" className="btn btn-dark">Submit</button>
                                 </p>
                             </ModalFooter>
                         </form>
@@ -86,7 +152,7 @@ const ModalExample = (props) => {
 
                             <ModalFooter>
                                 <p>
-                                    <button type="submit" className="btn btn-dark">Submit</button>
+                                    <button style={{ background: "#420EFF", color: "white", textTransform: "uppercase", fontWeight: "bold" }} type="submit" className="btn btn-dark">Submit</button>
                                 </p>
                             </ModalFooter>
                         </form>
