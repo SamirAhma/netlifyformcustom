@@ -75,12 +75,12 @@ const ModalExample = (props) => {
 
                         </form> */}
 
-                        <form name="Hello" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
+                        {/* <form name="Hello" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
                             <input type="hidden" name="form-name" value="Hello" />
                             <input type="textarea" class="form-control" id="message" name="question" placeholder="What is your question?" />
                             <button class="btn btn-primary" type="submit">Submit</button>
 
-                        </form>
+                        </form> */}
 
                     </div>
                 </div>

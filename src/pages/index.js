@@ -117,6 +117,16 @@ const IndexPage = () => {
             </div>
           </div>
 
+
+
+          <div className="card">
+            <form name="Hello" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
+              <input type="hidden" name="form-name" value="Hello" />
+              <input type="textarea" class="form-control" id="message" name="question" placeholder="What is your question?" />
+              <button class="btn btn-primary" type="submit">Submit</button>
+
+            </form>
+          </div>
         </div>
       </div>
 
