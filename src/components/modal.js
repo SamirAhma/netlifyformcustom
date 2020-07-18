@@ -51,11 +51,11 @@ const ModalExample = (props) => {
                 </div>
                 <div className="" style={showText ? {} : { display: "none" }}>
                     <div className="rating">
-                        <form className="rating-form" action="" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="Bad feedback" target="__blank">
+                        <form className="rating-form" action="" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="Badfeedback" target="__blank">
 
                             <ModalHeader toggle={toggle}>Awesome!</ModalHeader>
                             <ModalBody>
-                                <input type="hidden" name="form-name" value="Bad feedback" />
+                                <input type="hidden" name="form-name" value="Badfeedback" />
 
                                 <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label>
                                 <input type="textarea" class="form-control" id="message" placeholder="Your feedback here ..." />
