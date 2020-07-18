@@ -75,12 +75,12 @@ const ModalExample = (props) => {
 
                         </form> */}
 
-                        {/* <form name="Hello" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
+                        <form name="Hello" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
                             <input type="hidden" name="form-name" value="Hello" />
                             <input type="textarea" class="form-control" id="message" name="question" placeholder="What is your question?" />
                             <button class="btn btn-primary" type="submit">Submit</button>
 
-                        </form> */}
+                        </form>
 
                     </div>
                 </div>
@@ -89,7 +89,7 @@ const ModalExample = (props) => {
 
                 <div className="" style={showText1 ? {} : { display: "none" }}>
                     <div className="rating">
-                        <form className="rating-form" name="feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="">
+                        {/* <form className="rating-form" name="feedback" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="">
 
                             <ModalHeader toggle={toggle}>We're sorry. :(</ModalHeader>
                             <ModalBody>    <label for="message">What went wrong?</label>
@@ -101,7 +101,7 @@ const ModalExample = (props) => {
                                     <button type="submit" className="btn btn-dark">Submit</button>
                                 </p>
                             </ModalFooter>
-                        </form>
+                        </form> */}
 
 
 
