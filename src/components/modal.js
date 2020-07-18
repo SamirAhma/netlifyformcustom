@@ -58,7 +58,7 @@ const ModalExample = (props) => {
                                 <input type="hidden" name="form-name" value="Positive Feedback For Service" />
 
                                 <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label>
-                                <input type="textarea" class="form-control" id="message" name="positive-feedback" placeholder="Your feedback here ..." />
+                                <input type="textarea" class="form-control" id="message" name="message" placeholder="Your feedback here ..." />
                             </ModalBody>
 
                             <ModalFooter>
@@ -81,7 +81,7 @@ const ModalExample = (props) => {
                             <ModalHeader toggle={toggle}>We're sorry. :(</ModalHeader>
                             <ModalBody>    <label for="message">What went wrong?</label>
                                 <input type="hidden" name="form-name" value="Negative Feedback For Service" />
-                                <input type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="negative-feedback" />
+                                <input type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="message" />
                             </ModalBody>
 
                             <ModalFooter>
