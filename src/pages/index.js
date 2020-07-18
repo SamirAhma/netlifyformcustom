@@ -51,6 +51,7 @@ const IndexPage = () => {
             <form name="Feedback for services" method="post" data-netlify="true" data-netlify-honeypot="bot-field" target="__blank" action="">
               <input type="hidden" name="form-name" value="Feedback for services" />
               {/* <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label> */}
+              <input type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="Negative Feedback" />
               <input type="textarea" class="form-control" id="message" name="positive-feedback" placeholder="Your feedback here ..." />
               <button class="btn btn-primary" type="submit">Submit</button>
 
