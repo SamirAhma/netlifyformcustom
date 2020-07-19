@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import axios from "axios"
 import * as qs from "query-string"
-
+import PositiveFeedback from "./Feedbacks/ServicePositive"
 export default class modal extends Component {
     constructor(props) {
         // Do intro stuff ...
@@ -174,7 +174,7 @@ export default class modal extends Component {
 
 
                     <div className="" style={this.state.showPositiveFeedback ? {} : { display: "none" }}>
-                        <div className="rating">
+                        {/* <div className="rating">
                             {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
                             <form className="rating-form" ref={this.domRef} name="FeedbackServicePositive" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)} >
 
@@ -196,7 +196,9 @@ export default class modal extends Component {
                             </form>
 
 
-                        </div>
+                        </div> */}
+
+                        <PositiveFeedback />
                     </div>
 
 
