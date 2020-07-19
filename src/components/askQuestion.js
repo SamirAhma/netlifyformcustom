@@ -60,8 +60,7 @@ class AskQuestion extends React.Component {
 
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       data: qs.stringify(formData),
-      //############### need to change url // url: this.props.location.pathname,
-      // url: "https://nostalgic-spence-60f3f1.netlify.app"
+
       url: urlLocations,
     }
 

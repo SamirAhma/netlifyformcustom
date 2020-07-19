@@ -24,9 +24,9 @@ export default class ServicePositive extends Component {
         // that represent the form data we want to send to Netlify.
         const formData = {}
         Object.keys(this.refs).map(key => (formData[key] = this.refs[key].value))
-
+        const urlLocations = typeof window !== 'undefined' ? window.location.href : '';
         // Set options for axios. The URL we're submitting to
-        // (this.props.location.pathname) is the current page.
+
         const axiosOptions = {
 
             method: "post",
@@ -34,7 +34,7 @@ export default class ServicePositive extends Component {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             data: qs.stringify(formData),
             //############### need to change url // url: this.props.location.pathname,
-            url: "https://nostalgic-spence-60f3f1.netlify.app"
+            url: urlLocations
         }
 
         // Submit to Netlify. Upon success, set the feedback message and clear all
