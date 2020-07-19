@@ -12,7 +12,7 @@ export default class modal extends Component {
         super(props)
         this.domRef = React.createRef()
         this.state = {
-            feedbackMsg: null,
+
             modal: false,
             showNegativeFeedback: false,
             showPositiveFeedback: false
