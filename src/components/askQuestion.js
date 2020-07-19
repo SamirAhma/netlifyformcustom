@@ -35,7 +35,11 @@ class AskQuestion extends React.Component {
     // Do intro stuff ...
     super(props)
     this.domRef = React.createRef()
-    this.state = { feedbackMsg: null }
+    this.state = {
+      feedbackMsg: null,
+      showForm: true
+
+    }
   }
 
   handleSubmit(event) {
@@ -67,6 +71,7 @@ class AskQuestion extends React.Component {
       .then(response => {
         this.setState({
           feedbackMsg: "Form submitted successfully!",
+          showForm: !this.state.showForm
         })
         this.domRef.current.reset()
       })
@@ -87,58 +92,29 @@ class AskQuestion extends React.Component {
 
               {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
 
-              {/* <form
-                ref={this.domRef}
-                name="Ask Question"
-                method="POST"
-                data-netlify="true"
-                onSubmit={event => this.handleSubmit(event)}
-              >
-                <input type="hidden" name="form-name" value="Ask Question" />
-                <input
-                  type="textarea"
-                  class="form-control"
-                  id="message"
-                  name="question"
-                  placeholder="What is your question?"
-                  required
-                />
-                <div className="mt-2">
-                  <button
-                    class="btn"
-                    style={{
-                      background: "#420EFF",
-                      color: "white",
-                      textTransform: "uppercase",
-                      fontWeight: "bold",
-                    }}
-                    type="submit"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form> */}
 
+              <div style={this.state.showForm ? {} : { display: "none" }}>
 
-              <form ref={this.domRef} name="AskQuestion" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)}>
-                <input ref="form-name" type="hidden" name="form-name" value="AskQuestion" />
+                <form ref={this.domRef} name="AskQuestion" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)}>
+                  <input ref="form-name" type="hidden" name="form-name" value="AskQuestion" />
 
 
 
-                <textarea class="form-control"
-                  id="message" ref="message" name="message" placeholder="What is your question?" />
+                  <textarea class="form-control"
+                    id="message" ref="message" name="message" placeholder="What is your question?" />
 
 
-                <div className="mt-2">
-                  <button class="btn"
-                    style={{
-                      background: "#420EFF",
-                      color: "white",
-                      textTransform: "uppercase",
-                      fontWeight: "bold",
-                    }} type="submit">Submit</button>
-                </div>
-              </form>
+                  <div className="mt-2">
+                    <button class="btn"
+                      style={{
+                        background: "#420EFF",
+                        color: "white",
+                        textTransform: "uppercase",
+                        fontWeight: "bold",
+                      }} type="submit">Submit</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
