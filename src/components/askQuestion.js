@@ -119,8 +119,8 @@ class AskQuestion extends React.Component {
               </form> */}
 
 
-              <form ref={this.domRef} name="Contact Form" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)}>
-                <input ref="form-name" type="hidden" name="form-name" value="Contact Form" />
+              <form ref={this.domRef} name="Ask Question" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)}>
+                <input ref="form-name" type="hidden" name="form-name" value="Ask Question" />
 
 
 
@@ -129,13 +129,13 @@ class AskQuestion extends React.Component {
 
 
                 <div className="mt-2">
-                <button class="btn"
-                  style={{
-                    background: "#420EFF",
-                    color: "white",
-                    textTransform: "uppercase",
-                    fontWeight: "bold",
-                  }} type="submit">Submit</button>
+                  <button class="btn"
+                    style={{
+                      background: "#420EFF",
+                      color: "white",
+                      textTransform: "uppercase",
+                      fontWeight: "bold",
+                    }} type="submit">Submit</button>
                 </div>
               </form>
             </div>
