@@ -32,8 +32,8 @@ const IndexPage = () => {
 
         {/* dummy form so netlify able to detect the form for popu.The name of the form need to be same with the form in the popup */}
         <div className="card" style={{ display: "none" }}>
-          <form name="Positive Feedback For Service" method="post" data-netlify="true" data-netlify-honeypot="bot-field" >
-            <input type="hidden" name="form-name" value="Positive For Feedback Service" />
+          <form name="FeedbackServicePositive" method="post" data-netlify="true" data-netlify-honeypot="bot-field" >
+            <input type="hidden" name="form-name" value="FeedbackServicePositive" />
             {/* <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label> */}
 
             <input type="textarea" class="form-control" id="message" name="message" placeholder="Your feedback here ..." />
@@ -41,8 +41,8 @@ const IndexPage = () => {
 
           </form>
 
-          <form name="Negative Feedback For Service" method="post" data-netlify="true" data-netlify-honeypot="bot-field" >
-            <input type="hidden" name="form-name" value="Negative Feedback For Service" />
+          <form name="FeedbackServiceNegative" method="post" data-netlify="true" data-netlify-honeypot="bot-field" >
+            <input type="hidden" name="form-name" value="FeedbackServiceNegative" />
             {/* <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label> */}
             <input type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="message" />
 
