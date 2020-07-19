@@ -57,11 +57,13 @@ export default class ServicePositive extends Component {
         return (
             <>
                 <div className="rating">
-                    {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
+
                     <form className="rating-form" ref={this.domRef} name="FeedbackServiceNegative" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)} >
 
                         <ModalHeader toggle={this.toggle}>We're sorry. :(</ModalHeader>
-                        <ModalBody>    <label for="message">What went wrong?</label>
+                        <ModalBody>
+                            {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
+                            <label for="message">What went wrong?</label>
                             <input ref="form-name" type="hidden" name="form-name" value="FeedbackServiceNegative" />
                             <input ref="message" type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="message" />
                         </ModalBody>

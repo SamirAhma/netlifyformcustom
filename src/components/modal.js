@@ -2,9 +2,8 @@
 
 
 import React, { Component } from 'react'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import axios from "axios"
-import * as qs from "query-string"
+import { Button, Modal } from 'reactstrap';
+
 import PositiveFeedback from "./Feedbacks/ServicePositive"
 import NegativeFeedback from "./Feedbacks/ServiceNegative"
 export default class modal extends Component {
@@ -22,44 +21,6 @@ export default class modal extends Component {
 
     }
 
-    handleSubmit(event) {
-        // Do form submission stuff ...
-        // Do not submit form via HTTP, since we're doing that via XHR request.
-        event.preventDefault()
-        // Loop through this component's refs (the fields) and add them to the
-        // formData object. What we're left with is an object of key-value pairs
-        // that represent the form data we want to send to Netlify.
-        const formData = {}
-        Object.keys(this.refs).map(key => (formData[key] = this.refs[key].value))
-
-        // Set options for axios. The URL we're submitting to
-        // (this.props.location.pathname) is the current page.
-        const axiosOptions = {
-
-            method: "post",
-
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            data: qs.stringify(formData),
-            //############### need to change url // url: this.props.location.pathname,
-            url: "https://nostalgic-spence-60f3f1.netlify.app"
-        }
-
-        // Submit to Netlify. Upon success, set the feedback message and clear all
-        // the fields within the form. Upon failure, keep the fields as they are,
-        // but set the feedback message to show the error state.
-        axios(axiosOptions)
-            .then(response => {
-                this.setState({
-                    feedbackMsg: "Form submitted successfully!",
-                })
-                this.domRef.current.reset()
-            })
-            .catch(err =>
-                this.setState({
-                    feedbackMsg: "Form could not be submitted.",
-                })
-            )
-    }
 
 
 
@@ -156,8 +117,6 @@ export default class modal extends Component {
                                         textAlign: "center",
                                         textDecoration: "none",
                                         transition: " background .2s,border .2s,box-shadow .2s,color .2s",
-
-
                                         userSelect: "none",
                                         verticalAlign: "middle",
                                         whiteSpace: "nowrap"
@@ -174,7 +133,7 @@ export default class modal extends Component {
 
 
 
-                    <div className="" style={this.state.showPositiveFeedback ? {} : { display: "none" }}>
+                    <div style={this.state.showPositiveFeedback ? {} : { display: "none" }}>
 
 
                         <PositiveFeedback />
@@ -182,7 +141,7 @@ export default class modal extends Component {
 
 
 
-                    <div className="" style={this.state.showNegativeFeedback ? {} : { display: "none" }}>
+                    <div style={this.state.showNegativeFeedback ? {} : { display: "none" }}>
                         <NegativeFeedback />
                     </div>
 
