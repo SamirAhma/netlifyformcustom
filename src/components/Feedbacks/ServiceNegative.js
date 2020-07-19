@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import axios from "axios"
 import * as qs from "query-string"
+
+// import axios and query-string
+
+
+
 export default class ServicePositive extends Component {
     constructor(props) {
         // Do intro stuff ...
@@ -33,7 +38,7 @@ export default class ServicePositive extends Component {
 
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             data: qs.stringify(formData),
-            //############### need to change url // url: this.props.location.pathname,
+
             url: urlLocations
         }
 
@@ -63,9 +68,15 @@ export default class ServicePositive extends Component {
 
                         <ModalHeader toggle={this.toggle}>We're sorry. :(</ModalHeader>
                         <ModalBody>
+                            {/* this will show wether the form is succesfully be sent or not */}
                             {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
                             <label for="message" style={this.state.showForm ? {} : { display: "none" }}>What went wrong?</label>
+
+                            {/* this  is hidden but netlify need it to make sure netlify bot can see the form */}
                             <input ref="form-name" type="hidden" name="form-name" value="FeedbackServiceNegative" />
+
+                            {/* 
+                            textarea */}
                             <textarea ref="message" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="message" style={this.state.showForm ? {} : { display: "none" }}></textarea>
                         </ModalBody>
 

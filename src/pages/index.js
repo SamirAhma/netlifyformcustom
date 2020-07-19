@@ -4,6 +4,8 @@ import AskQuestion from "../components/askQuestion"
 import Modal from "../components/modal"
 
 
+// Need to  install axios, query-string, reactstrap
+
 const IndexPage = () => {
 
 
@@ -18,13 +20,13 @@ const IndexPage = () => {
         <AskQuestion></AskQuestion>
 
 
-        {/* Button for the pop ups using reactstrap */}
+        {/* Button for the pop ups Components using reactstrap */}
         <Modal buttonLabel="Send Feedback"></Modal>
 
 
 
 
-        {/* dummy form so netlify able to detect the form for popu.The name of the form need to be same with the form in the popup */}
+        {/* dummy form so netlify able to detect the form for popup.The name of the form need to be same with the form in the popup */}
         <div className="card" style={{ display: "none" }}>
           <form name="FeedbackServicePositive" method="post" data-netlify="true" data-netlify-honeypot="bot-field" >
             <input type="hidden" name="form-name" value="FeedbackServicePositive" />

@@ -6,6 +6,11 @@ import { Button, Modal } from 'reactstrap';
 
 import PositiveFeedback from "./Feedbacks/ServicePositive"
 import NegativeFeedback from "./Feedbacks/ServiceNegative"
+
+
+// import components for feedback
+
+
 export default class modal extends Component {
     constructor(props) {
         // Do intro stuff ...
@@ -22,10 +27,10 @@ export default class modal extends Component {
     }
 
 
-
+    //Toggle between showing pop up or not
 
     toggle = () => {
-        console.log(this.state.modal)
+
 
         this.setState({
             modal: !this.state.modal
@@ -38,6 +43,9 @@ export default class modal extends Component {
         return (
             <div>
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" ></link>
+
+
+                {/* //Send feedback button */}
                 <Button style={{
                     background: "#fff",
                     border: ".05rem solid #5627ff",
@@ -54,22 +62,31 @@ export default class modal extends Component {
                     textAlign: "center",
                     textDecoration: "none",
                     transition: " background .2s,border .2s,box-shadow .2s,color .2s",
-
-
                     userSelect: "none",
                     verticalAlign: "middle",
                     whiteSpace: "nowrap"
                 }} onClick={this.toggle}>{this.props.buttonLabel}</Button>
+
+
+
+                {/* Pop up toggle*/}
+
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+
+
+                    {/* check first if negative or positive feedback already clicked if not show this div */}
+
                     <div className="" style={this.state.showNegativeFeedback || this.state.showPositiveFeedback ? { display: "none" } : {}} >
                         <div className="text-center mt-1 mb-5" toggle={this.toggle}>
 
                             <h5>  How was your experience with papergov?</h5>
                         </div>
 
-                        <div className="" style={{ textAlign: "center" }}>
+                        <div style={{ textAlign: "center" }}>
                             <div className="text-center">
                                 <p>
+                                    {/* 
+                                    button positive feedback */}
                                     <Button style={{
                                         background: "#fff",
                                         border: ".05rem solid #5627ff",
@@ -101,6 +118,9 @@ export default class modal extends Component {
 
                                 <p>
 
+                                    {/* 
+button negative feedback */}
+
                                     <Button style={{
                                         background: "#fff",
                                         border: ".05rem solid #5627ff",
@@ -131,7 +151,7 @@ export default class modal extends Component {
 
                     </div>
 
-
+                    {/* if button good feedback is clicked this will showup */}
 
                     <div style={this.state.showPositiveFeedback ? {} : { display: "none" }}>
 
@@ -139,7 +159,7 @@ export default class modal extends Component {
                         <PositiveFeedback />
                     </div>
 
-
+                    {/* if button negative feedback is clicked this will showup */}
 
                     <div style={this.state.showNegativeFeedback ? {} : { display: "none" }}>
                         <NegativeFeedback />

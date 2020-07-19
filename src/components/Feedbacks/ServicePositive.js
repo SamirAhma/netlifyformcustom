@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import axios from "axios"
 import * as qs from "query-string"
+
+
+// import axios and query-string
+
 export default class ServicePositive extends Component {
     constructor(props) {
         // Do intro stuff ...
@@ -64,7 +68,10 @@ export default class ServicePositive extends Component {
                         <ModalHeader toggle={this.toggle}>Awesome!</ModalHeader>
                         <ModalBody>
                             <div className="text-center">
+                                {/* this will show wether the form is succesfully be sent or not */}
                                 {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
+
+                                {/* this  is hidden but netlify need it to make sure netlify bot can see the form */}
                                 <input ref="form-name" type="hidden" name="form-name" value="FeedbackServicePositive" />
 
                                 <label for="message" style={this.state.showForm ? {} : { display: "none" }}>If you have a minute more, can you share a sentence or two about how this website helped you?</label>
