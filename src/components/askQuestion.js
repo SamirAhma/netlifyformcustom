@@ -119,8 +119,8 @@ class AskQuestion extends React.Component {
               </form> */}
 
 
-              <form ref={this.domRef} name="Ask Question" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)}>
-                <input ref="form-name" type="hidden" name="form-name" value="Ask Question" />
+              <form ref={this.domRef} name="AskQuestion" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)}>
+                <input ref="form-name" type="hidden" name="form-name" value="AskQuestion" />
 
 
 
