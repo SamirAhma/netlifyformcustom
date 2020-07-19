@@ -30,8 +30,6 @@ import React from "react"
 import axios from "axios"
 import * as qs from "query-string"
 
-import Layout from "../components/layout"
-
 class AskQuestion extends React.Component {
   constructor(props) {
     // Do intro stuff ...
@@ -58,7 +56,7 @@ class AskQuestion extends React.Component {
 
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       data: qs.stringify(formData),
-   url: "https://gracious-mayer-94ebe7.netlify.app",
+      url: "https://gracious-mayer-94ebe7.netlify.app",
     }
 
     // Submit to Netlify. Upon success, set the feedback message and clear all
@@ -90,12 +88,12 @@ class AskQuestion extends React.Component {
 
               <form
                 ref={this.domRef}
-                name="Contact Form"
+                name="Ask Question"
                 method="POST"
                 data-netlify="true"
                 onSubmit={event => this.handleSubmit(event)}
               >
-                <input type="hidden" name="form-name" value="AskQuestion" />
+                <input type="hidden" name="form-name" value="Ask Question" />
                 <input
                   type="textarea"
                   class="form-control"
