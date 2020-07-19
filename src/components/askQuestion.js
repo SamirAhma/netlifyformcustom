@@ -86,7 +86,7 @@ class AskQuestion extends React.Component {
 
               {this.state.feedbackMsg && <p>{this.state.feedbackMsg}</p>}
 
-              <form
+              {/* <form
                 ref={this.domRef}
                 name="Ask Question"
                 method="POST"
@@ -116,6 +116,16 @@ class AskQuestion extends React.Component {
                     Submit
                   </button>
                 </div>
+              </form> */}
+
+
+              <form ref={this.domRef} name="Contact Form" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)}>
+                <input ref="form-name" type="hidden" name="form-name" value="Contact Form" />
+
+                <input ref="email" type="email" name="email" />
+
+                <textarea ref="message" name="message" />
+                <button type="submit">Submit</button>
               </form>
             </div>
           </div>
