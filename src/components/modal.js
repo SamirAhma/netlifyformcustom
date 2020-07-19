@@ -176,15 +176,15 @@ export default class modal extends Component {
                     <div className="" style={this.state.showPositiveFeedback ? {} : { display: "none" }}>
                         <div className="rating">
                             {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
-                            <form className="rating-form" ref={this.domRef} name="FeedbackService" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)} >
+                            <form className="rating-form" ref={this.domRef} name="FeedbackServicePositive" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)} >
 
                                 <ModalHeader toggle={this.toggle}>Awesome!</ModalHeader>
                                 <ModalBody>
                                     <div className="text-center">
-                                        <input ref="form-name" type="hidden" name="form-name" value="FeedbackService" />
+                                        <input ref="form-name" type="hidden" name="form-name" value="FeedbackServicePositive" />
 
                                         <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label>
-                                        <input ref="positive-feedback" type="textarea" class="form-control" id="message" name="positive-feedback" placeholder="Your feedback here ..." required />
+                                        <input ref="message" type="textarea" class="form-control" id="message" name="message" placeholder="Your feedback here ..." />
 
                                     </div>
                                 </ModalBody>
@@ -204,12 +204,12 @@ export default class modal extends Component {
                     <div className="" style={this.state.showNegativeFeedback ? {} : { display: "none" }}>
                         <div className="rating">
                             {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
-                            <form className="rating-form" ref={this.domRef} name="FeedbackService" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)} >
+                            <form className="rating-form" ref={this.domRef} name="FeedbackServiceNegative" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)} >
 
                                 <ModalHeader toggle={this.toggle}>We're sorry. :(</ModalHeader>
                                 <ModalBody>    <label for="message">What went wrong?</label>
-                                    <input ref="form-name" type="hidden" name="form-name" value="FeedbackService" />
-                                    <input ref="negative-feedback" type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="negative-feedback" required />
+                                    <input ref="form-name" type="hidden" name="form-name" value="FeedbackServiceNegative" />
+                                    <input ref="message" type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="message" />
                                 </ModalBody>
 
                                 <ModalFooter>
