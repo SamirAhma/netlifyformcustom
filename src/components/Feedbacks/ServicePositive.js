@@ -57,7 +57,7 @@ export default class ServicePositive extends Component {
     render() {
         return (
             <>
-                <div className="rating" style={this.state.showForm ? {} : { display: "none" }}>
+                <div className="rating" >
 
                     <form className="rating-form" ref={this.domRef} name="FeedbackServicePositive" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)} >
 
@@ -67,12 +67,12 @@ export default class ServicePositive extends Component {
                                 {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
                                 <input ref="form-name" type="hidden" name="form-name" value="FeedbackServicePositive" />
 
-                                <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label>
-                                <textarea ref="message" class="form-control" id="message" name="message" placeholder="Your feedback here ..."></textarea>
+                                <label for="message" style={this.state.showForm ? {} : { display: "none" }}>If you have a minute more, can you share a sentence or two about how this website helped you?</label>
+                                <textarea ref="message" class="form-control" id="message" name="message" placeholder="Your feedback here ..." style={this.state.showForm ? {} : { display: "none" }}></textarea>
 
                             </div>
                         </ModalBody>
-                        <ModalFooter>
+                        <ModalFooter style={this.state.showForm ? {} : { display: "none" }}>
                             <p>
                                 <button style={{ background: "#420EFF", color: "white", textTransform: "uppercase", fontWeight: "bold" }} type="submit" className="btn btn-dark">Submit</button>
                             </p>
