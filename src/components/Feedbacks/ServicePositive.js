@@ -67,7 +67,7 @@ export default class ServicePositive extends Component {
                                 <input ref="form-name" type="hidden" name="form-name" value="FeedbackServicePositive" />
 
                                 <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label>
-                                <input ref="message" type="textarea" class="form-control" id="message" name="message" placeholder="Your feedback here ..." />
+                                <textarea ref="message" class="form-control" id="message" name="message" placeholder="Your feedback here ..."></textarea>
 
                             </div>
                         </ModalBody>

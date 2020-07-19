@@ -65,7 +65,7 @@ export default class ServicePositive extends Component {
                             {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
                             <label for="message">What went wrong?</label>
                             <input ref="form-name" type="hidden" name="form-name" value="FeedbackServiceNegative" />
-                            <input ref="message" type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="message" />
+                            <textarea ref="message" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="message"></textarea>
                         </ModalBody>
 
                         <ModalFooter>
