@@ -41,18 +41,18 @@ const IndexPage = () => {
 
           </form>
 
-          <form name="FeedbackServiceNegative" method="post" data-netlify="true" data-netlify-honeypot="bot-field" >
-            <input type="hidden" name="form-name" value="FeedbackServiceNegative" />
-            {/* <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label> */}
-            <input type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="message" />
-
-            <button class="btn btn-primary" type="submit">Submit</button>
-
-          </form>
         </div>
       </div>
 
 
+      <form name="FeedbackServiceNegative" method="post" data-netlify="true" data-netlify-honeypot="bot-field" style={{ display: "none" }}>
+        <input type="hidden" name="form-name" value="FeedbackServiceNegative" />
+        {/* <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label> */}
+        <input type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="message" />
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+      </form>
     </>
   )
 }
