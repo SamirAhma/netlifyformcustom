@@ -58,7 +58,7 @@ class AskQuestion extends React.Component {
 
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       data: qs.stringify(formData),
-      url: "https://jovial-carson-f1b19c.netlify.app",
+   url: "https://gracious-mayer-94ebe7.netlify.app",
     }
 
     // Submit to Netlify. Upon success, set the feedback message and clear all
