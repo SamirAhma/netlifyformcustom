@@ -6,6 +6,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import axios from "axios"
 import * as qs from "query-string"
 import PositiveFeedback from "./Feedbacks/ServicePositive"
+import NegativeFeedback from "./Feedbacks/ServiceNegative"
 export default class modal extends Component {
     constructor(props) {
         // Do intro stuff ...
@@ -174,29 +175,7 @@ export default class modal extends Component {
 
 
                     <div className="" style={this.state.showPositiveFeedback ? {} : { display: "none" }}>
-                        {/* <div className="rating">
-                            {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
-                            <form className="rating-form" ref={this.domRef} name="FeedbackServicePositive" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)} >
 
-                                <ModalHeader toggle={this.toggle}>Awesome!</ModalHeader>
-                                <ModalBody>
-                                    <div className="text-center">
-                                        <input ref="form-name" type="hidden" name="form-name" value="FeedbackServicePositive" />
-
-                                        <label for="message">If you have a minute more, can you share a sentence or two about how this website helped you?</label>
-                                        <input ref="message" type="textarea" class="form-control" id="message" name="message" placeholder="Your feedback here ..." />
-
-                                    </div>
-                                </ModalBody>
-                                <ModalFooter>
-                                    <p>
-                                        <button style={{ background: "#420EFF", color: "white", textTransform: "uppercase", fontWeight: "bold" }} type="submit" className="btn btn-dark">Submit</button>
-                                    </p>
-                                </ModalFooter>
-                            </form>
-
-
-                        </div> */}
 
                         <PositiveFeedback />
                     </div>
@@ -204,26 +183,7 @@ export default class modal extends Component {
 
 
                     <div className="" style={this.state.showNegativeFeedback ? {} : { display: "none" }}>
-                        <div className="rating">
-                            {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
-                            <form className="rating-form" ref={this.domRef} name="FeedbackServiceNegative" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)} >
-
-                                <ModalHeader toggle={this.toggle}>We're sorry. :(</ModalHeader>
-                                <ModalBody>    <label for="message">What went wrong?</label>
-                                    <input ref="form-name" type="hidden" name="form-name" value="FeedbackServiceNegative" />
-                                    <input ref="message" type="textarea" class="form-control" id="message" placeholder="Your comments here..." row="3" cols="3" name="message" />
-                                </ModalBody>
-
-                                <ModalFooter>
-                                    <p>
-                                        <button style={{ background: "#420EFF", color: "white", textTransform: "uppercase", fontWeight: "bold" }} type="submit" className="btn btn-dark">Submit</button>
-                                    </p>
-                                </ModalFooter>
-                            </form>
-
-
-
-                        </div>
+                        <NegativeFeedback />
                     </div>
 
                 </Modal>
