@@ -122,10 +122,21 @@ class AskQuestion extends React.Component {
               <form ref={this.domRef} name="Contact Form" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)}>
                 <input ref="form-name" type="hidden" name="form-name" value="Contact Form" />
 
-                <input ref="email" type="email" name="email" />
 
-                <textarea ref="message" name="message" />
-                <button type="submit">Submit</button>
+
+                <textarea class="form-control"
+                  id="message" ref="message" name="message" placeholder="What is your question?" />
+
+
+                <div className="mt-2">
+                <button class="btn"
+                  style={{
+                    background: "#420EFF",
+                    color: "white",
+                    textTransform: "uppercase",
+                    fontWeight: "bold",
+                  }} type="submit">Submit</button>
+                </div>
               </form>
             </div>
           </div>
