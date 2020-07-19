@@ -51,11 +51,12 @@ class AskQuestion extends React.Component {
     // Set options for axios. The URL we're submitting to
     // (this.props.location.pathname) is the current page.
     const axiosOptions = {
-      // url: this.props.location.pathname,
+
       method: "post",
 
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       data: qs.stringify(formData),
+      //############### need to change url // url: this.props.location.pathname,
       url: "https://nostalgic-spence-60f3f1.netlify.app"
     }
 
@@ -84,7 +85,7 @@ class AskQuestion extends React.Component {
             <div class="card-body">
               <h5 class="card-title">Ask a Question</h5>
 
-              {this.state.feedbackMsg && <p>{this.state.feedbackMsg}</p>}
+              {this.state.feedbackMsg && <p style={{ color: "#420EFF" }}>{this.state.feedbackMsg}</p>}
 
               {/* <form
                 ref={this.domRef}
