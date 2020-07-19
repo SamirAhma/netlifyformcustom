@@ -9,7 +9,7 @@ export default class ServicePositive extends Component {
         this.domRef = React.createRef()
         this.state = {
             feedbackMsg: null,
-
+            showForm: true
 
         }
 
@@ -44,6 +44,7 @@ export default class ServicePositive extends Component {
             .then(response => {
                 this.setState({
                     feedbackMsg: "Form submitted successfully!",
+                    showForm: !this.state.showForm
                 })
                 this.domRef.current.reset()
             })
@@ -56,7 +57,7 @@ export default class ServicePositive extends Component {
     render() {
         return (
             <>
-                <div className="rating">
+                <div className="rating" style={this.state.showForm ? {} : { display: "none" }}>
 
                     <form className="rating-form" ref={this.domRef} name="FeedbackServiceNegative" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)} >
 
